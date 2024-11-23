@@ -20,6 +20,9 @@ The project uses the following dependencies
 
 ---
 
+
+
+
 ## Main Endpoints
 
 ### The service exposes the following endpoints under the /api/xml-generator base path:
@@ -59,6 +62,9 @@ Parameters:
         A custom SQL query to generate the report.
 
 ---
+
+
+
 
 ## Project Structure:
 ### controller: 
