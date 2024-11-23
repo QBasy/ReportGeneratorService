@@ -8,6 +8,7 @@
 The project uses the following dependencies
 
 ```groovy
+dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-web-services'
@@ -16,6 +17,10 @@ The project uses the following dependencies
     implementation 'com.lowagie:itext:2.1.7'
 
     runtimeOnly 'org.postgresql:postgresql'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
 ```
 
 ---
@@ -27,7 +32,7 @@ The project uses the following dependencies
 
 ### The service exposes the following endpoints under the /api/xml-generator base path:
 ```
-    /sendXML [POST]
+/sendXML [POST]
 ```
 
 Generates a .jrxml file and sends it as an attachment.
@@ -50,7 +55,7 @@ curl -X POST -H "Content-Type: text/plain" -d "SELECT id, name FROM users" http:
 ```
 
 ```
-    /generate [POST]
+/generate [POST]
 ```
 Generates a PDF report by creating and compiling a .jrxml file into PDF.
 
@@ -81,15 +86,15 @@ Parameters:
 ## How to Run:
 1. Clone the repository and navigate to the project directory:
 ```bash
-    git clone <repository_url>
-    cd report-generator
+git clone <repository_url>
+cd report-generator
 ```
 
 2. Configure the application.properties file to point to your PostgreSQL database:
 ```properties
-    spring.datasource.url=jdbc:postgresql://<host>:<port>/<database>
-    spring.datasource.username=<username>
-    spring.datasource.password=<password>
+spring.datasource.url=jdbc:postgresql://<host>:<port>/<database>
+spring.datasource.username=<username>
+spring.datasource.password=<password>
 ```
 
 3. Build and run the application:
