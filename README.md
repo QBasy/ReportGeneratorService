@@ -1,6 +1,8 @@
 # Report Generator 
 ## Made By Sayat Adilkhanov
 
+---
+
 ### Written on Java 
 ### Dependencies:
 The project uses the following dependencies
@@ -15,6 +17,8 @@ The project uses the following dependencies
 
     runtimeOnly 'org.postgresql:postgresql'
 ```
+
+---
 
 ## Main Endpoints
 
@@ -54,6 +58,8 @@ Parameters:
     Body (optional):
         A custom SQL query to generate the report.
 
+---
+
 ## Project Structure:
 ### controller: 
         Contains the REST controller handling the endpoints.
@@ -63,6 +69,8 @@ Parameters:
         Manages database interactions using JPA.
 ### config: 
         Contains configuration files for PostgreSQL and application settings.
+
+---
 
 How to Run:
 1. Clone the repository and navigate to the project directory:
