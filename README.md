@@ -72,7 +72,7 @@ Parameters:
 
 ---
 
-How to Run:
+## How to Run:
 1. Clone the repository and navigate to the project directory:
 ```bash
     git clone <repository_url>
